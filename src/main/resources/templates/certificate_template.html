@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: black;
+            display: table;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .certificate-wrapper-inside {
+            border: 20px solid #1e384b;
+            width: 750px;
+            height: 563px;
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .certificate-text {
+            color: #2e1f5a;
+            font-size: 50px;
+            margin: 20px;
+        }
+
+        .achievement-text {
+            color: darkslateblue;
+            font-size: 25px;
+            margin: 10px;
+        }
+
+        .assignment-text {
+            font-style: italic;
+            margin: 20px;
+            color: #2b2b2c;
+        }
+
+        .person-name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4d27cc;
+            margin: 20px auto;
+            width: 400px;
+        }
+
+        .description {
+            color: #1e1e1e;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            position: absolute;
+            bottom: 0;
+        }
+
+        td {
+            padding: 10px;
+            text-align: left;
+            vertical-align: bottom;
+        }
+
+        .last-divs {
+            text-align: center;
+            font-weight: bold
+        }
+
+        .grey-color {
+            color: dimgray;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+<div class="certificate-wrapper-inside">
+
+    <div class="certificate-text">
+        CERTIFICATE
+    </div>
+
+    <div class="achievement-text">
+        OF ACHIEVEMENT
+    </div>
+
+    <div class="assignment-text">
+        This certificate is awarded to
+    </div>
+
+    <div class="person-name" th:text="${RECIPIENT_NAME}">
+        JOSEGUI MOKO
+    </div>
+
+    <div class="description" th:text="${COURSE_DESCRIPTION}">
+        has failed successfully to complete the course
+        Aikido a modern japanese martial art
+    </div>
+
+    <br>
+
+    <div class="last-divs">
+        <div style="font-size: 20px; font-weight: bold" th:text="${ISSUE_DATE}">25-12-2024</div>
+        <span class="grey-color">------------------------</span>
+        <div style="font-size: 15px; font-weight: bold">DATE</div>
+    </div>
+
+    <br>
+
+    <div class="last-divs">
+        <div style="font-style: italic; font-size: 20px; color: #91bee0" th:text="${RECIPIENT_NAME}">william.fonseca
+        </div>
+        <span class="grey-color">------------------------</span>
+        <div style="font-size: 15px; font-weight: bold; padding-bottom: 5px;">SIGNATURE</div>
+    </div>
+
+</div>
+</body>
+</html>
