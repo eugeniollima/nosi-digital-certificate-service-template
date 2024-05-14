@@ -38,7 +38,7 @@ public class GeneratePdfCertificateHelper {
       final var os = new ByteArrayOutputStream();
 
       final var doc = html5ParseDocument(certificateTemplateWithData);
-
+      System.out.println(doc);
       new PdfRendererBuilder().
               useFastMode()
               .withW3cDocument(doc, null)

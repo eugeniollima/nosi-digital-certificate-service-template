@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: black;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .certificate-wrapper-inside {
+            border: 20px solid #294d68;
+            width: 750px;
+            height: 563px;
+            margin: auto;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade */
+            overflow: hidden; /* Para garantir que a opacidade não se espalhe para o conteúdo */
+            
+            overflow: hidden;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('D:/APP/nosi-ma/digitalTeam/nosi-digital-certificate-service-template/src/main/resources/templates/nosi.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5; /* Opacidade apenas para a imagem de fundo */
+        }
+
+        .certificate-text {
+            color: #2e1f5a;
+            font-size: 50px;
+            margin: 20px;
+            opacity: 0.9;
+        }
+        .flaticon {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 80px;
+            height: 100px;
+        }
+        .flaticon2 {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+            margin-top: 12px;
+        }
+
+        .achievement-text {
+            color: darkslateblue;
+            font-size: 25px;
+            margin: 10px;
+            opacity: 0.9;
+        }
+
+        .assignment-text {
+            font-style: italic;
+            margin: 20px;
+            color: #2b2b2c;
+            opacity: 0.9;
+        }
+
+        .person-name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4d27cc;
+            margin: 20px auto;
+            width: 400px;
+            opacity: 0.9;
+        }
+
+        .description {
+            color: #1e1e1e;
+            margin: 20px;
+            opacity: 0.9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            position: absolute;
+            bottom: 0;
+            opacity: 0.9;
+        }
+
+        td {
+            padding: 10px;
+            text-align: left;
+            vertical-align: bottom;
+        }
+
+        .last-divs {
+            text-align: center;
+            font-weight: bold;
+            opacity: 0.9;
+        }
+
+        .grey-color {
+            color: dimgray;
+            opacity: 0.9;
+        }
+    </style>
+    <title>Certificate</title>
+</head>
+<body>
+
+<div class="certificate-wrapper-inside">
+    <div class="background-image"></div>
+    <div>
+        
+    </div>
+    <img class="flaticon" src="./certificate-clip-art-18.png" alt="Flaticon Icon">
+    <img class="flaticon2" src="./LOGOTIPO-NOSi-02.png" alt="Flaticon Icon">
+
+    <div class="certificate-text">
+        CERTIFICATE
+    </div>
+
+    <div class="achievement-text">
+        OF ACHIEVEMENT
+    </div>
+
+    <div class="assignment-text">
+        This certificate is awarded to
+    </div>
+
+    <div class="person-name" th:text="${RECIPIENT_NAME}">
+        John Doe
+    </div>
+
+    <div class="description" th:text="${COURSE_DESCRIPTION}">
+        Certificate Description
+    </div>
+
+    <br>
+
+    <div class="last-divs">
+        <div style="font-size: 20px; font-weight: bold" th:text="${ISSUE_DATE}">25-12-2024</div>
+        <span class="grey-color">------------------------</span>
+        <div style="font-size: 15px; font-weight: bold">DATE</div>
+    </div>
+
+    <br>
+
+    <div class="last-divs">
+        <div style="font-style: italic; font-size: 20px; color: #010c14" th:text="${RECIPIENT_NAME}">John Doe</div>
+        <span class="grey-color">------------------------</span>
+        <div style="font-size: 15px; font-weight: bold; padding-bottom: 5px;">marda</div>
+    </div>
+
+</div>
+
+</body>
+</html>
